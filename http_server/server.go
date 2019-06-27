@@ -5,11 +5,13 @@ import (
 	"net/http"
 )
 
+// Store store information about players
 type PlayerStore interface {
 	GetPlayerScore(name string) int
 	RecordWin(name string)
 }
 
+// HTTP interface for player information
 type PlayerServer struct {
 	store PlayerStore
 }
