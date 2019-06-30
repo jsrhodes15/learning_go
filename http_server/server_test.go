@@ -129,8 +129,6 @@ func assertStatus(t *testing.T, got, want int) {
 	}
 }
 
-const jsonContentType = "application/json"
-
 func assertContentType(t *testing.T, response *httptest.ResponseRecorder, want string) {
 	t.Helper()
 	if response.Result().Header.Get("content-type") != want {
